@@ -1,0 +1,10 @@
+```javascript {tabTitle:metro.config.js}
+const { getDefaultConfig } = require("expo/metro-config");
+const { withSentryConfig } = require("@sentry/react-native/metro");
+
+const defaultConfig = getDefaultConfig(__dirname);
+
+// ... some changes to your default config here
+
+module.exports = withSentryConfig(defaultConfig);
+```
